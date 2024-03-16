@@ -1,68 +1,120 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    --bg: #23252C;
+    --fw-bold: 700;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html, body {
+    height: 100vh;
+    margin: 0;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    background-color: var(--bg);
+    color: #FFFFFF;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#root {
+    height: calc(100% - 4rem);
+}
+.container {
+    background-color: #1A1B21;
+    width: 317px;
+    margin: 2rem auto;
+    border-radius: 0.5rem;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.details, .about, .interests, footer {
+    padding: 0 2rem;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.details {
+    text-align: center;
+    display: grid;
+}
+
+h3.info__fullname {
+    margin: 1.25rem 0 0 0;
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+}
+
+p.info__position {
+    font-size: 0.8rem;
+    color: #F3BF99;
+    margin: 0.4rem 0 0 0;
+}
+
+.website-link {
+    margin-top: 0.5rem;
+    font-size: 0.6rem;
+    text-decoration: none;
+    color: white;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.email-btn, .linkedin-btn {
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    font-size: 0.875rem;
+}
+.fa-envelope, .fa-linkedin-square {
+    margin-right: 0.3rem;
+}
+
+a.email-btn {
+    background-color: white;
+    color: #374151;
+}
+
+a.linkedin-btn {
+    background-color: #5093E2;
+    color: white;
+}
+
+.about {
+    margin-top: 2rem;
+}
+
+h1.about__title, h1.interests__title {
+    margin: 0 0 0.25rem 0;
+    font-size: 1rem;
+}
+
+p.about__text, p.interests__text {
+    margin: 0;
+    font-size: 0.65rem;
+}
+
+.interests {
+    margin-top: 1rem;
+    margin-bottom: 3rem;
+}
+
+footer {
+    background-color: #161619;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.8rem;
+    font-size: 1.5rem;
+}
+
+.social-links a i {
+    color: white;
+    opacity: 0.35;
 }
